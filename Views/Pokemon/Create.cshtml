@@ -1,0 +1,59 @@
+﻿@model pokedex.ViewModels.PokemonViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+    <html>
+    <head></head>
+    <body class="bg-danger">
+        <form asp-action="Create" method="post">
+            <a asp-controller="Pokemon" asp-action="Index" class="btn btn-success">Pokedex</a>
+            <a asp-controller="Pokemon" asp-action="Create" class="btn btn-danger" type="button">Registar  un pokemon</a>
+            <a asp-controller="Tipos" asp-action="Index" class="btn btn-info" type="button">Crear tipos de pokemon</a>
+            <a asp-controller="Regiones" asp-action="Index" class="btn btn-warning" type="button">registar region</a>
+
+
+            <div class="form-group">
+                <label asp-for="Nombre">Nombre del pokemon</label>
+                <input asp-for="Nombre" class="form-control" id="Nombre" aria-describedby="emailHelp">
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="font-weight-bold ">Tipo 1</label>
+                <select class="custom-select " asp-for="Tipo" asp-items="ViewBag.Tipos"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo2" class="font-weight-bold ">Tipo 2(opcional)</label>
+                <select class="custom-select " asp-for="Tipo2" asp-items="ViewBag.Tipos">
+                    <option value="..."></option>
+                </select>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Ataques">Ataque 1</label>
+                <input asp-for="Ataques" class="form-control" id="Ataques">
+            </div>
+            <div class="form-group">
+                <label asp-for="Ataque2">Ataque 2(opcional)</label>
+                <input asp-for="Ataque2" class="form-control" id="Ataque2">
+            </div>
+            <div class="form-group">
+                <label asp-for="Ataque3">Ataque 3(opcional)</label>
+                <input asp-for="Ataque3" class="form-control" id="Ataque3">
+            </div>
+            <div class="form-group">
+                <label asp-for="Ataque4">Ataque 4(opcional)</label>
+                <input asp-for="Ataque4" class="form-control" id="Ataque4">
+            </div>
+            <div class="form-group">
+                <label asp-for="Region" class="font-weight-bold ">Region</label>
+                <select class="custom-select " asp-for="Region" asp-items="ViewBag.Regiones"></select>
+            </div>
+
+            <button type="submit" class="btn btn-success">registrar en la pokedex</button>
+        </form>
+
+
+    </body>
+    </html>
+    
+

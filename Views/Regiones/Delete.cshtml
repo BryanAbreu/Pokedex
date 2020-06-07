@@ -1,0 +1,26 @@
+﻿@model pokedex.Models.Regiones
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+
+    <div class=" bg-danger text-light card-header">
+        <h3><strong>Eliminar esta region-@Model.Region</strong></h3>
+    </div>
+    <div class="card-body">
+
+        <h2>Esta seguro que quiere eliminar esta region?</h2>
+        <div>si eliminas esta region tambien se eliminaran todos los pokemons en ella</div>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Region" />
+            <button type="submit" value="Delete" class="btn btn-danger" >Eliminar</button> |
+            <a asp-action="Index" class="btn btn-light text-dark ">Cancelar</a>
+        </form>
+
+    </div>
+</div>
+

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<pokedex.ViewModels.TipoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <html>
+    <head></head>
+    <body class="bg-info" > 
+        <div class="container">
+            <a asp-controller="Pokemon" asp-action="Index"class="btn btn-success">Pokedex</a>
+            <a asp-controller="Pokemon" asp-action="Create" class="btn btn-danger" type="button">Registar  un pokemon</a>
+            <a asp-controller="Tipos" asp-action="Index" class="btn btn-info" type="button">Crear tipos de pokemon</a>
+            <a asp-controller="Regiones" asp-action="Index" class="btn btn-warning" type="button">registar region</a>    
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">tipos</th>
+                        <th scope="col">opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Tipos</td>
+                            <td>
+                                <a asp-action="Eliminar" asp-route-id="@item.Tipos" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                
+            </table>
+            <a asp-action="Crear" class="btn btn-success">Crear tipos</a>
+        </div>
+       
+    </body>
+</html>
+
+

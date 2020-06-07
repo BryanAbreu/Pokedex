@@ -1,0 +1,28 @@
+﻿@model pokedex.Models.Tipo
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+
+    <div class=" bg-danger text-light card-header">
+        <h3><strong>Eliminar el tipo de pokemon-@Model.Tipos</strong></h3>
+    </div>
+    <div class="card-body">
+
+        <h2>Esta seguro que quiere eliminar este tipo pokemon?</h2>
+        <div>Si eliminas este tipo tambien se eliminaran todos los pokemons de este tipo </div>
+        
+            <form asp-action="Eliminar">
+
+                <input type="hidden" asp-for="Tipos" />
+                <input type="submit" value="Eliminar" class="btn btn-danger" />  |
+                <a asp-action="Index" class="btn btn-light text-dark ">Atras</a>
+            </form>
+       
+
+    </div>
+</div>
+

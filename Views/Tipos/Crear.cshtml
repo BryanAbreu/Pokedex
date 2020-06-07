@@ -1,0 +1,33 @@
+﻿@model pokedex.Models.Tipo
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Crea tu tipos de pokemon</h1>
+
+
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Crear">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Tipos" class="control-label"></label>
+                <input asp-for="Tipos" class="form-control" />
+                <span asp-validation-for="Tipos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-info">Atras</a>
+</div>
+

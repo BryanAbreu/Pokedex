@@ -1,0 +1,290 @@
+﻿@model IEnumerable<pokedex.ViewModels.PokemonViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<html>
+<head></head>
+<body class="bg-success">
+
+
+    
+
+
+    <div class="container">
+        <a asp-controller="Pokemon" asp-action="Index" class="btn btn-success">Pokedex</a>
+        <a asp-controller="Pokemon" asp-action="Create" class="btn btn-danger" type="button">Registar  un pokemon</a>
+        <a asp-controller="Tipos" asp-action="Index" class="btn btn-info" type="button">Crear tipos de pokemon</a>
+        <a asp-controller="Regiones" asp-action="Index" class="btn btn-warning" type="button">registar region</a>
+
+        <div class="row">
+            @foreach (  var item in Model)
+            {
+                switch (@item.Region)
+                {
+                    case "Kanto":
+                        <div class="col-sm-4">
+                            <div class="card card-body" style="margin-top:10px;background-color:yellow">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+                    case "Johto":
+                        <div class="col-sm-4">
+                            <div class="card card-body " style="margin-top:10px;background-color:silver">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+
+                    case "Hoenn":
+                        <div class="col-sm-4">
+                            <div class="card card-body " style="margin-top:10px;background-color:springgreen">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+
+                    case "Sinnoh":
+                        <div class="col-sm-4">
+                            <div class="card card-body " style="margin-top:10px;background-color:darkred">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+                    case "Teselia":
+                        <div class="col-sm-4">
+                            <div class="card card-body" style="margin-top:10px;background-color:aqua">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+
+                    case "Unova":
+                        <div class="col-sm-4">
+                            <div class="card card-body" style="margin-top:10px;background-color:aqua">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+                    case "Kalos":
+                        <div class="col-sm-4">
+                            <div class="card card-body" style="margin-top:10px;background-color:orangered">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        break;
+                    case "Alola":
+                        <div class="col-sm-4">
+                            <div class="card card-body" style="margin-top:10px;background-color:blue">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+                    case "Galar":
+                        <div class="col-sm-4">
+                            <div class="card card-body" style="margin-top:10px;background-color:blueviolet">
+                                <div class="card-body">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="@item.Nombre">
+
+                                        <p class="card-text text-center">
+                                            @item.Nombre
+                                        <p>
+                                            <button type="button" class="btn  btn-success " data-toggle="modal" data-target="#@item.Nombre">
+                                                <strong>Datos pokemon</strong>
+                                            </button>
+                                        </p>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        break;
+                }
+
+
+
+
+
+                <div class="modal fade" id="@item.Nombre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-danger">
+                                <h5 class="modal-title " id="exampleModalLabel">@item.Nombre</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body bg-success">
+                                <li><strong class="text-danger">Nombre:</strong> @item.Nombre</li>
+                                <li><strong class="text-danger"> Tipo:</strong>@item.Tipo @item.Tipo2</li>
+                                <li><strong class="text-danger">Ataque 1: </strong>@item.Ataques</li>
+                                <li><strong class="text-danger">Ataque 3: </strong>@item.Ataque2</li>
+                                <li><strong class="text-danger">Ataque 3: </strong>@item.Ataque3</li>
+                                <li><strong class="text-danger">Ataque 4: </strong>@item.Ataque4</li>
+                                <li><strong class="text-danger"> Region:</strong>@item.Region</li>
+                            </div>
+                            <div class="modal-footer">
+                                <form asp-for="nombre" asp-route-nombre="@item.Nombre" asp-action="Delete">
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                                <form>
+                                </form>
+                                <a asp-action="Edit"  asp-route-nombre="@item.Nombre" class="btn btn-secondary btn-info">Editar</a>
+                                <button type="submit" class="btn btn-secondary btn-info" data-dismiss="modal">Atras</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+ 
+            
+      
+    
+   
+
+        
